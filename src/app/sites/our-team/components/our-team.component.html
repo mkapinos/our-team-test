@@ -1,0 +1,13 @@
+
+<h1>{{block.title}}</h1>
+
+<div class="cards">
+  <ng-container *ngFor="let card of block.cards">
+    <app-card [image]="card.image">
+      <h2>{{card.title}}</h2>
+      <h3>{{card.description}}</h3>
+      <a class="email" href="mailto:{{card.link}}">{{card.link}}</a>
+      <a class="phone" href="tel:{{card.text}}">{{card.text}}</a>
+    </app-card>
+  </ng-container>
+</div>
