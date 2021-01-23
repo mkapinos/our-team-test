@@ -1,6 +1,8 @@
 
 h1 {
   text-align: center;
+  color: #0a2d4f;
+  margin-top: 30px;
 }
 
 .cards {
@@ -20,19 +22,31 @@ h1 {
       font-size: 11px;
       padding: 0;
       margin: 0;
+      color: #1f3240;
+      margin-bottom: 4px;
     }
+
     h3 {
       font-size: 11px;
       padding: 0;
       margin: 0;
+      color: #696f75;
+      margin-bottom: 20px;
     }
+
     .email {
       font-size: 11px;
       display: block;
+      color: #517b9e;
+      margin-bottom: 4px;
+      text-decoration: none;
     }
+
     .phone {
       font-size: 11px;
       display: block;
+      color: #696f75;
+      text-decoration: none;
     }
   }
 

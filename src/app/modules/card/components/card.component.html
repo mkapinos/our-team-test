@@ -1,8 +1,5 @@
 <h2 *ngIf="title">{{title}}</h2>
 
-<picture>
-  <source media="(min-width:650px)" srcset="{{image.medium}}">
-  <img *ngIf="image" src="{{image.small}}" [attr.alt]="image.alt"/>
-</picture>
+<app-image [image]="image"></app-image>
 
 <p><ng-content></ng-content></p>

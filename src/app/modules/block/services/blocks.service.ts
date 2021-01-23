@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
-import { DataService } from '../../common/services/data.service';
 import { Observable } from 'rxjs';
-import { BlockCard } from '../models/block-card';
 import { map } from 'rxjs/operators';
-import { DataItem, DataItemType } from '../../common/models/data';
 import { Block, BlockDataAttributes } from '../models/block';
+import { StoreDataItem, StoreDataItemType } from '../../store/models/data';
+import { DataService } from '../../store/services/data.service';
 
 @Injectable({
   providedIn: 'root'
@@ -14,9 +13,9 @@ export class BlocksService {
   constructor(private dataService: DataService) { }
 
   all(): Observable<Block[]> {
-    return this.dataService.getData<BlockDataAttributes>(DataItemType.Blocks).pipe(
-        map((blocks: DataItem<BlockDataAttributes>[]) => {
-          return blocks.map((item: DataItem<BlockDataAttributes>) => mapToBlock(item));
+    return this.dataService.getData<BlockDataAttributes>(StoreDataItemType.Blocks).pipe(
+        map((blocks: StoreDataItem<BlockDataAttributes>[]) => {
+          return blocks.map((item: StoreDataItem<BlockDataAttributes>) => new Block(item));
         })
     );
   }
@@ -29,9 +28,4 @@ export class BlocksService {
     );
   }
 
-}
-
-
-function mapToBlock(item: DataItem<BlockDataAttributes>): Block {
-  return new Block(item);
 }

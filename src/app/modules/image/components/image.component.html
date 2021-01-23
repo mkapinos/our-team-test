@@ -1,0 +1,4 @@
+<picture>
+  <source media="(min-width:650px)" srcset="{{image.medium}}">
+  <img *ngIf="image" src="{{image.small}}" [attr.alt]="image.alt"/>
+</picture>

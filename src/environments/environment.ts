@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
 
-  ourTeamBlockId: '1'
+  ourTeamBlockId: '1',
+  storePath: 'https://cobiro-website-builder.s3-eu-west-1.amazonaws.com/task/index.json'
 };
 
 /*

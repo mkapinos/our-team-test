@@ -1,5 +1,5 @@
 import { BlockCard, BlockDataCard } from './block-card';
-import { DataItem } from '../../common/models/data';
+import { StoreDataItem } from '../../store/models/data';
 
 export interface BlockDataAttributes {
   title: string;
@@ -24,7 +24,7 @@ export class Block {
 
   private readonly cardsCache: BlockCard[];
 
-  constructor(private data: DataItem<BlockDataAttributes>) {
+  constructor(private data: StoreDataItem<BlockDataAttributes>) {
     this.cardsCache = mapToCards(data.attributes.memberCards);
   }
 }
