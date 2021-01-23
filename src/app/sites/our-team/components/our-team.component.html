@@ -4,10 +4,10 @@
 <div class="cards">
   <ng-container *ngFor="let card of block.cards">
     <app-card [image]="card.image">
-      <h2>{{card.title}}</h2>
-      <h3>{{card.description}}</h3>
-      <a class="email" href="mailto:{{card.link}}">{{card.link}}</a>
-      <a class="phone" href="tel:{{card.text}}">{{card.text}}</a>
+      <h2 class="t2e-title">{{card.title}}</h2>
+      <h3 class="t2e-position">{{card.description}}</h3>
+      <a class="email t2e-email" href="mailto:{{card.link}}">{{card.link}}</a>
+      <a class="phone t2e-phone" href="tel:{{card.text}}">{{card.text}}</a>
     </app-card>
   </ng-container>
 </div>

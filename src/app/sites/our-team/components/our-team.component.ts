@@ -14,6 +14,9 @@ export class OurTeamComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
+    if (!this.route.snapshot.data[`block`]) {
+      throw new Error('Wrong data');
+    }
     this.block = this.route.snapshot.data[`block`];
   }
 

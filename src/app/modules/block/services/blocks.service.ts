@@ -3,14 +3,14 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Block, BlockDataAttributes } from '../models/block';
 import { StoreDataItem, StoreDataItemType } from '../../store/models/data';
-import { DataService } from '../../store/services/data.service';
+import { StoreService } from '../../store/services/store.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BlocksService {
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: StoreService) { }
 
   all(): Observable<Block[]> {
     return this.dataService.getData<BlockDataAttributes>(StoreDataItemType.Blocks).pipe(
