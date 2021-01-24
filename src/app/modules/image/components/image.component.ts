@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Image } from '../../image/models/image';
 
 @Component({
@@ -6,13 +6,6 @@ import { Image } from '../../image/models/image';
   templateUrl: './image.component.html',
   styleUrls: ['./image.component.scss']
 })
-export class ImageComponent implements OnInit {
-
+export class ImageComponent {
   @Input() image: Image;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

@@ -10,10 +10,6 @@ export interface BlockDataCard {
   };
 }
 
-export interface BlockDataCardImageUrls {
-  [size: string]: string;
-}
-
 export class BlockCard {
 
   get title(): string {
@@ -42,6 +38,10 @@ export class BlockCard {
     this.image = new Image(data.block.title, createImageThumbsMap(data.imageUrl));
   }
 
+}
+
+interface BlockDataCardImageUrls {
+  [size: string]: string;
 }
 
 function createImageThumbsMap(imageUrls: BlockDataCardImageUrls): Map<ImageThumbSize, string> {

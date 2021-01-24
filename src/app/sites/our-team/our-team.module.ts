@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { OurTeamComponent } from './components/our-team.component';
+import { BLOCK_RESOLVER_NAME, OurTeamComponent } from './components/our-team.component';
 import { RouterModule, Routes } from '@angular/router';
 import { OurTeamResolver } from './resolvers/our-team-resolver';
 import { CardModule } from '../../modules/card/card.module';
@@ -10,7 +10,7 @@ const routes: Routes = [
     path: '',
     component: OurTeamComponent,
     resolve: {
-      block: OurTeamResolver
+      [BLOCK_RESOLVER_NAME]: OurTeamResolver
     }
   }
 ];
@@ -23,5 +23,4 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ]
 })
-export class OurTeamModule { }
-
+export class OurTeamModule {}

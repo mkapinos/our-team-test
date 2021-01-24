@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-
 import { BlocksService } from './blocks.service';
 import { StoreService } from '../../store/services/store.service';
 import { of } from 'rxjs';
@@ -58,5 +57,4 @@ describe('TeamService', () => {
       done();
     });
   });
-
 });
